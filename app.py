@@ -7,8 +7,8 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-os.environ['LANGCHAIN_API_KEY'] = os.getenv('LANGCHAIN_API_KEY')
-os.environ['LANGCHAIN_PROJECT'] = os.getenv('LANGCHAIN_PROJECT')
+langchain_api_key = st.secrets.get("LANGCHAIN_API_KEY")
+langchain_project = st.secrets.get("LANGCHAIN_PROJECT")
 os.environ['LANGCHAIN_TRACING_v2'] = 'true'
 
 
